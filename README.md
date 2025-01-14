@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to **web-craftsman**!
+Welcome to the branch **React Core Concepts** of the **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -12,11 +12,48 @@ This repository is where I document my web development learning process. As I im
 - **Learning Branches**: Each branch is dedicated to a specific topic or project. I'll use different branches to organize my progress on various web development concepts and technologies.
   - For example: `project-1`, `concept-2`, etc.
 
-## My Learning Focus
+## Topics Covered
 
-1. **Web Development**: Mastering the skills required for both frontend and backend development.
-2. **Best Practices**: Writing clean, maintainable code is a key goal of mine.
-3. **Projects**: I will build real-world projects to practice and showcase my skills.
+1. Understanding the concept of `useState`
+2. Understanding the concept of `useEffect`
+
+---
+
+## **How to Use This Branch**
+
+To explore the **React Core Concepts** module, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/eh-munna/web-craftsman
+   ```
+
+2. **Navigate to the repository folder:**
+
+   ```bash
+   cd web-craftsman
+   ```
+
+3. **Switch to this branch:**
+
+   ```bash
+   git checkout react-core-concept
+   ```
+
+4. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+5. **Run the app:**
+
+   ```bash
+   npm run dev
+   ```
+
+---
 
 ## Contributing
 
