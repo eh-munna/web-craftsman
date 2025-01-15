@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 99.99,
+    "brand": "SoundMax",
+    "stock": 120,
+    "imgUrl": "https://example.com/images/headphones-front.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Case",
+    "price": 19.99,
+    "brand": "CaseCo",
+    "stock": 350,
+    "imgUrl": "https://example.com/images/case-front.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Portable Coffee Mug",
+    "price": 15.99,
+    "brand": "BrewBuddy",
+    "stock": 200,
+    "imgUrl": "https://example.com/images/mug-front.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gaming Mouse",
+    "price": 49.99,
+    "brand": "GamePro",
+    "stock": 80,
+    "imgUrl": "https://example.com/images/mouse-top.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Yoga Mat",
+    "price": 24.99,
+    "brand": "ZenMat",
+    "stock": 150,
+    "imgUrl": "https://example.com/images/yoga-mat.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Stainless Steel Water Bottle",
+    "price": 12.99,
+    "brand": "HydroSafe",
+    "stock": 300,
+    "imgUrl": "https://example.com/images/water-bottle.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Laptop Backpack",
+    "price": 39.99,
+    "brand": "UrbanGear",
+    "stock": 100,
+    "imgUrl": "https://example.com/images/laptop-backpack.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Wireless Keyboard",
+    "price": 29.99,
+    "brand": "KeyEase",
+    "stock": 150,
+    "imgUrl": "https://example.com/images/keyboard.jpg"
+  },
+  {
+    "id": 9,
+    "name": "LED Desk Lamp",
+    "price": 22.99,
+    "brand": "BrightHome",
+    "stock": 80,
+    "imgUrl": "https://example.com/images/desk-lamp.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Running Shoes",
+    "price": 59.99,
+    "brand": "SprintWear",
+    "stock": 90,
+    "imgUrl": "https://example.com/images/running-shoes.jpg"
+  }
+]

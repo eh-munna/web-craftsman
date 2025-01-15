@@ -1,11 +1,10 @@
-import Countries from './components/Countries/Countries';
+import Products from './components/Products/Products';
 
 function App() {
   return (
     <>
-      <Countries />
+      <Products />
     </>
   );
 }
-
 export default App;

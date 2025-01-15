@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **React With Rest Countries** branch of **web-craftsman**!
+Welcome to the **React With Data Integration** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -14,20 +14,27 @@ This repository serves as a hub to document my web development learning process.
 - **Learning Branches**: Each branch is dedicated to a specific topic or project. I'll use different branches to organize my progress on various web development concepts and technologies.
   - For example: `project-1`, `concept-2`, etc.
 
+---
+
 ## About This Project
 
-This branch focuses on building a React application that interacts with REST APIs to display country information. Key features include:
+This branch focuses on building a React application that displays product information, along with saving and retrieving data from local storage to ensure data persistence.
 
-1. **Managing Side Effects**: Using `useEffect` to load data efficiently.
-2. **State Management**: Leveraging `useState` to store and manage component state.
-3. **Event Handling**: Implementing event handlers to update the UI dynamically.
-4. **Interactive UI**: Displaying visited countries by adding their flags to the interface.
+Key highlights of this project include:
+
+1. **Managing Side Effects**: Utilizing `useEffect` to efficiently load data.
+2. **State Management**: Using `useState` to handle and manage component state.
+3. **Event Handling**: Implementing event handlers for dynamic UI updates.
+4. **Cart Functionality**: Adding products to the cart and handling cart updates.
+5. **Local Storage Integration**: Persisting cart data to local storage.
+6. **Retrieving Data**: Fetching saved data from local storage on app initialization.
+7. **Preventing Duplicates**: Ensuring products are not added to the cart multiple times.
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **React With Rest Countries** module, follow these steps:
+To explore the **React With Data Integration** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -44,7 +51,7 @@ To explore the **React With Rest Countries** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout react-with-rest-countries
+   git checkout data-storage-integration
    ```
 
 4. **Install dependencies:**
@@ -64,6 +71,8 @@ To explore the **React With Rest Countries** module, follow these steps:
 ## Contributing
 
 I welcome contributions! If you'd like to help improve my code, share tips, or suggest resources, feel free to open an issue or submit a pull request. Collaboration is encouraged.
+
+---
 
 ## **Reach Out to Me**
 
