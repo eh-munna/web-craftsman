@@ -1,11 +1,9 @@
-import Player from './components/Player/Player';
-import Users from './components/Users/Users';
+import Countries from './components/Countries/Countries';
 
 function App() {
   return (
     <>
-      <Player />
-      <Users />
+      <Countries />
     </>
   );
 }

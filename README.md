@@ -1,10 +1,12 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the branch **React Core Concepts** of the **web-craftsman**!
+Welcome to the **React With Rest Countries** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
-This repository is where I document my web development learning process. As I improve my skills in web development, I will be sharing my code, projects, and insights in different branches to keep everything organized and easy to follow.
+This repository serves as a hub to document my web development learning process. As I advance, I’ll share my code, projects, and insights, all neatly organized in different branches for ease of navigation.
+
+---
 
 ## Repository Structure
 
@@ -12,16 +14,20 @@ This repository is where I document my web development learning process. As I im
 - **Learning Branches**: Each branch is dedicated to a specific topic or project. I'll use different branches to organize my progress on various web development concepts and technologies.
   - For example: `project-1`, `concept-2`, etc.
 
-## Topics Covered
+## About This Project
 
-1. Understanding the concept of `useState`
-2. Understanding the concept of `useEffect`
+This branch focuses on building a React application that interacts with REST APIs to display country information. Key features include:
+
+1. **Managing Side Effects**: Using `useEffect` to load data efficiently.
+2. **State Management**: Leveraging `useState` to store and manage component state.
+3. **Event Handling**: Implementing event handlers to update the UI dynamically.
+4. **Interactive UI**: Displaying visited countries by adding their flags to the interface.
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **React Core Concepts** module, follow these steps:
+To explore the **React With Rest Countries** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -38,7 +44,7 @@ To explore the **React Core Concepts** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout react-core-concept
+   git checkout react-with-rest-countries
    ```
 
 4. **Install dependencies:**
