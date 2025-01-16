@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **React Form Controlling, Hooks and Context API** branch of **web-craftsman**!
+Welcome to the **React Router Hunting** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -18,23 +18,19 @@ This repository serves as a hub to document my web development learning process.
 
 ## About This Project
 
-This branch focuses on building a React application that demonstrates form controlling and state management using **React Hooks** and **Context API**. The goal is to manage form inputs, control state across components, and explore best practices for managing global state with Context API, without the need for prop drilling.
+This branch, **React Router Hunting**, focuses on mastering React Router and its use in dynamic and interactive web applications. The key objectives of this branch include:
 
 ### Key Highlights
 
-1. **Controlling Input**:
-2. **Controlling Input using customHook**:
-3. **Context API**:
-
-4. **Controlling Input:** Learn how to manage form inputs and maintain their state within React components.
-5. **Controlling Input using customHook:** Explore creating custom hooks to abstract form logic and enhance code reusability.
-6. **Context API:** Discover how to use Context API to manage global state across multiple components without prop drilling, making the app more scalable.
+1. **Dynamic Routing**: Implementing routes that adapt to URL parameters to render specific content dynamically.
+2. **Saving Data in Local Storage**: Storing user or application data persistently in the browser.
+3. **Loading Data in Dynamic Routes**: Fetching and displaying data based on route parameters, enabling dynamic and personalized user experiences.
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **React Form Controlling, Hooks and Context API** module, follow these steps:
+To explore the **React Router Hunting** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -51,7 +47,7 @@ To explore the **React Form Controlling, Hooks and Context API** module, follow 
 3. **Switch to this branch:**
 
    ```bash
-   git checkout react-form-hooks-context
+   git checkout react-router-hunting
    ```
 
 4. **Install dependencies:**

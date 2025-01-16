@@ -1,82 +1,192 @@
 [
   {
     "id": 1,
-    "name": "Wireless Bluetooth Headphones",
-    "price": 99.99,
-    "brand": "SoundMax",
-    "stock": 120,
-    "imgUrl": "https://example.com/images/headphones-front.jpg"
+    "title": "Frontend Developer",
+    "company": "TechCorp",
+    "description": "Join our team as a Frontend Developer, where you will build innovative and scalable applications using modern technologies.",
+    "responsibilities": [
+      "Develop user-facing features using React.",
+      "Collaborate with backend developers to integrate APIs.",
+      "Optimize application for maximum speed and scalability."
+    ],
+    "requirements": [
+      "Experience with React and frontend technologies.",
+      "Strong understanding of UI/UX principles.",
+      "Experience with version control (Git)."
+    ],
+    "status": "remote",
+    "salary": "$70,000 - $90,000 per year",
+    "contact": "hr@techcorp.com"
   },
   {
     "id": 2,
-    "name": "Smartphone Case",
-    "price": 19.99,
-    "brand": "CaseCo",
-    "stock": 350,
-    "imgUrl": "https://example.com/images/case-front.jpg"
+    "title": "Backend Developer",
+    "company": "DataCorp",
+    "description": "We are looking for a Backend Developer to help us design and implement the server-side logic and databases for our platform.",
+    "responsibilities": [
+      "Write server-side code to handle requests.",
+      "Design and manage databases.",
+      "Collaborate with frontend developers."
+    ],
+    "requirements": [
+      "Experience with Node.js, Express, and MongoDB.",
+      "Knowledge of RESTful APIs.",
+      "Experience with cloud platforms (AWS, Google Cloud)."
+    ],
+    "status": "onsite",
+    "salary": "$80,000 - $100,000 per year",
+    "contact": "jobs@datacorp.com"
   },
   {
     "id": 3,
-    "name": "Portable Coffee Mug",
-    "price": 15.99,
-    "brand": "BrewBuddy",
-    "stock": 200,
-    "imgUrl": "https://example.com/images/mug-front.jpg"
+    "title": "UI/UX Designer",
+    "company": "CreativeSolutions",
+    "description": "Join our design team to create user-centered designs for digital products with a focus on UI/UX design principles.",
+    "responsibilities": [
+      "Design user interfaces for web and mobile applications.",
+      "Conduct user research and testing.",
+      "Create wireframes, prototypes, and high-fidelity mockups."
+    ],
+    "requirements": [
+      "Proficiency in Figma, Sketch, or Adobe XD.",
+      "Strong understanding of design systems.",
+      "Experience with user testing and research."
+    ],
+    "status": "onsite",
+    "salary": "$65,000 - $85,000 per year",
+    "contact": "contact@creativesolutions.com"
   },
   {
     "id": 4,
-    "name": "Gaming Mouse",
-    "price": 49.99,
-    "brand": "GamePro",
-    "stock": 80,
-    "imgUrl": "https://example.com/images/mouse-top.jpg"
+    "title": "Full Stack Developer",
+    "company": "InnovativeTech",
+    "description": "As a Full Stack Developer, you will work on both the frontend and backend of applications, delivering full-fledged solutions.",
+    "responsibilities": [
+      "Work on both client-side and server-side development.",
+      "Develop REST APIs and integrate with databases.",
+      "Collaborate with teams to define product features."
+    ],
+    "requirements": [
+      "Experience with JavaScript (React, Node.js, Express).",
+      "Familiarity with SQL and NoSQL databases.",
+      "Understanding of cloud deployment and microservices."
+    ],
+    "status": "remote",
+    "salary": "$90,000 - $120,000 per year",
+    "contact": "recruitment@innovativetech.com"
   },
   {
     "id": 5,
-    "name": "Yoga Mat",
-    "price": 24.99,
-    "brand": "ZenMat",
-    "stock": 150,
-    "imgUrl": "https://example.com/images/yoga-mat.jpg"
+    "title": "Product Manager",
+    "company": "ProductHub",
+    "description": "Lead product development and define the product roadmap for a growing tech company, focusing on user experience and market needs.",
+    "responsibilities": [
+      "Define the product vision and strategy.",
+      "Collaborate with engineering, design, and marketing teams.",
+      "Ensure product development aligns with business goals."
+    ],
+    "requirements": [
+      "Experience in product management or similar roles.",
+      "Excellent communication and leadership skills.",
+      "Familiarity with Agile development processes."
+    ],
+    "status": "remote",
+    "salary": "$100,000 - $130,000 per year",
+    "contact": "jobs@producthub.com"
   },
   {
     "id": 6,
-    "name": "Stainless Steel Water Bottle",
-    "price": 12.99,
-    "brand": "HydroSafe",
-    "stock": 300,
-    "imgUrl": "https://example.com/images/water-bottle.jpg"
+    "title": "Software Engineer",
+    "company": "SoftWorks",
+    "description": "We are looking for a passionate software engineer to develop and maintain applications that power our cutting-edge platform.",
+    "responsibilities": [
+      "Develop and maintain core software applications.",
+      "Write clean and efficient code.",
+      "Troubleshoot and debug software issues."
+    ],
+    "requirements": [
+      "Strong experience with Python or Java.",
+      "Knowledge of data structures and algorithms.",
+      "Experience with version control systems like Git."
+    ],
+    "status": "remote",
+    "salary": "$75,000 - $95,000 per year",
+    "contact": "careers@softworks.com"
   },
   {
     "id": 7,
-    "name": "Laptop Backpack",
-    "price": 39.99,
-    "brand": "UrbanGear",
-    "stock": 100,
-    "imgUrl": "https://example.com/images/laptop-backpack.jpg"
+    "title": "Data Scientist",
+    "company": "DataX",
+    "description": "We are seeking a Data Scientist to analyze and interpret complex data to drive insights and guide decision-making for our clients.",
+    "responsibilities": [
+      "Analyze large datasets to identify trends and patterns.",
+      "Build predictive models and machine learning algorithms.",
+      "Collaborate with stakeholders to understand business needs."
+    ],
+    "requirements": [
+      "Experience with Python, R, and machine learning libraries.",
+      "Strong knowledge of data analysis and statistics.",
+      "Familiarity with data visualization tools."
+    ],
+    "status": "onsite",
+    "salary": "$95,000 - $120,000 per year",
+    "contact": "recruitment@datax.com"
   },
   {
     "id": 8,
-    "name": "Wireless Keyboard",
-    "price": 29.99,
-    "brand": "KeyEase",
-    "stock": 150,
-    "imgUrl": "https://example.com/images/keyboard.jpg"
+    "title": "Marketing Specialist",
+    "company": "MarketGen",
+    "description": "We are looking for a marketing specialist to help promote our brand through targeted campaigns and strategic outreach.",
+    "responsibilities": [
+      "Develop and implement marketing strategies.",
+      "Conduct market research and analyze trends.",
+      "Manage social media accounts and advertising campaigns."
+    ],
+    "requirements": [
+      "Experience with digital marketing tools and analytics.",
+      "Strong communication and creative skills.",
+      "Ability to analyze market trends and consumer behavior."
+    ],
+    "status": "remote",
+    "salary": "$60,000 - $80,000 per year",
+    "contact": "hr@marketgen.com"
   },
   {
     "id": 9,
-    "name": "LED Desk Lamp",
-    "price": 22.99,
-    "brand": "BrightHome",
-    "stock": 80,
-    "imgUrl": "https://example.com/images/desk-lamp.jpg"
+    "title": "Sales Manager",
+    "company": "SalesForce",
+    "description": "Lead and manage a team of sales representatives to drive revenue growth and foster customer relationships.",
+    "responsibilities": [
+      "Develop sales strategies to meet company targets.",
+      "Manage sales team performance and set quotas.",
+      "Analyze sales data to identify opportunities for growth."
+    ],
+    "requirements": [
+      "Proven experience in sales management.",
+      "Strong leadership and communication skills.",
+      "Ability to analyze sales metrics and data."
+    ],
+    "status": "onsite",
+    "salary": "$80,000 - $110,000 per year",
+    "contact": "jobs@salesforce.com"
   },
   {
     "id": 10,
-    "name": "Running Shoes",
-    "price": 59.99,
-    "brand": "SprintWear",
-    "stock": 90,
-    "imgUrl": "https://example.com/images/running-shoes.jpg"
+    "title": "Customer Support Specialist",
+    "company": "SupportPro",
+    "description": "Join our customer support team and help resolve customer issues while providing excellent service and building strong relationships.",
+    "responsibilities": [
+      "Assist customers with product issues and troubleshooting.",
+      "Manage customer inquiries and support tickets.",
+      "Provide feedback to improve products and services."
+    ],
+    "requirements": [
+      "Excellent communication and problem-solving skills.",
+      "Experience in customer service or support.",
+      "Ability to work under pressure and multitask."
+    ],
+    "status": "remote",
+    "salary": "$45,000 - $60,000 per year",
+    "contact": "support@supportpro.com"
   }
 ]
