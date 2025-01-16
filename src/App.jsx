@@ -1,9 +1,11 @@
-import Products from './components/Products/Products';
+import { Outlet } from 'react-router';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <>
-      <Products />
+      <Navbar />
+      <Outlet />
     </>
   );
 }

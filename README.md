@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **React With Data Integration** branch of **web-craftsman**!
+Welcome to the **React With Router** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -18,23 +18,23 @@ This repository serves as a hub to document my web development learning process.
 
 ## About This Project
 
-This branch focuses on building a React application that displays product information, along with saving and retrieving data from local storage to ensure data persistence.
+This branch focuses on building a React application that displays product information, while focusing on react routing.
 
-Key highlights of this project include:
+### Key Highlights
 
-1. **Managing Side Effects**: Utilizing `useEffect` to efficiently load data.
-2. **State Management**: Using `useState` to handle and manage component state.
-3. **Event Handling**: Implementing event handlers for dynamic UI updates.
-4. **Cart Functionality**: Adding products to the cart and handling cart updates.
-5. **Local Storage Integration**: Persisting cart data to local storage.
-6. **Retrieving Data**: Fetching saved data from local storage on app initialization.
-7. **Preventing Duplicates**: Ensuring products are not added to the cart multiple times.
+1. **Router Setup**: How to set up React Router.
+2. **Nesting Routing**: Concepts for nested routes.
+3. **Not Found**: Handling 404 errors in your app.
+4. **Client-Side Routing**: Enabling URL updates without reloading the page using `<Link>`.
+5. **Loading Data**: Implementing data loading with `useLoaderData`.
+6. **URL Params in Loaders**: Dynamically handling URL segments with colons (`:`).
+7. **Navigation**: Using `useNavigate` for programmatic navigation.
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **React With Data Integration** module, follow these steps:
+To explore the **React With Router** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -51,7 +51,7 @@ To explore the **React With Data Integration** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout data-storage-integration
+   git checkout react-with-router
    ```
 
 4. **Install dependencies:**

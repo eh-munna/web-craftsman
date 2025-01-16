@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router';
 import { addToLocalStorage, getItem } from '../../utils/storeInLocalStorage';
 import Cart from '../Cart/Cart';
 import Product from './Product/Product';
 
 function Products() {
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
+  const products = useLoaderData();
   const [cart, setCart] = useState([]);
-  useEffect(() => {
-    (async () => {
-      const response = await fetch('/data.json');
-      const data = await response.json();
-      setProducts(data);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const response = await fetch('/data.json');
+  //     const data = await response.json();
+  //     setProducts(data);
+  //   })();
+  // }, []);
 
   useEffect(() => {
     const storedProductIds = getItem();
