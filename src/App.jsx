@@ -1,11 +1,11 @@
-import { Outlet } from 'react-router';
-import Navbar from './components/Navbar/Navbar';
+import Form from './components/Form/Form';
+import Heading from './components/Heading/Heading';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <Form />
+      <Heading />
     </>
   );
 }
