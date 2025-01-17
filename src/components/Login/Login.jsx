@@ -1,25 +1,19 @@
-import {
-  GithubAuthProvider,
-  GoogleAuthProvider,
-  getAuth,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-} from 'firebase/auth';
-import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
-import app from '../../authentication/firebase.authentication';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../authentication/firebase.authentication';
+import { AuthContext } from '../../providers/AuthProvider';
 
 function Login() {
-  const [user, setUser] = useState(null);
+  const { user, setUser, createGoogleLogin, createGithubLogin, userSignOut } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
-  // Initialize Firebase Authentication and get a reference to the service
-  const auth = getAuth(app);
-
-  const googleAuthProvider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
+  // ---login with email and password---
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -30,6 +24,7 @@ function Login() {
         // Signed in
         const loggedUser = userCredential.user;
         setUser(loggedUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -38,11 +33,15 @@ function Login() {
       });
   };
 
+  // ---social logins---
+
+  // ___google handler___
   const handleGoogleLogin = () => {
-    signInWithPopup(auth, googleAuthProvider)
+    createGoogleLogin()
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
+        navigate('/');
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -51,29 +50,31 @@ function Login() {
       });
   };
 
-  const handleGithubLogin = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        const loggedUser = result.user;
-        setUser(loggedUser);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log('Error:', errorCode, errorMessage);
-      });
-  };
+  // const handleGithubLogin = () => {
+  //   createGithubLogin()
+  //     .then((result) => {
+  //       const loggedUser = result.user;
+  //       setUser(loggedUser);
+  //     })
+  //     .catch((error) => {
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       console.log('Error:', errorCode, errorMessage);
+  //     });
+  // };
 
-  const handleSignOut = () => {
-    signOut(auth)
-      .then(() => {
-        setUser(null);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log('Error:', errorCode, errorMessage);
-      });
+  // ___github handler___
+  const handleGithubLogin = async () => {
+    try {
+      const result = await createGithubLogin();
+      const loggedUser = result.user;
+      setUser(loggedUser);
+      navigate('/');
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log('Error:', errorCode, errorMessage);
+    }
   };
 
   if (user) {
@@ -82,18 +83,10 @@ function Login() {
         <h2 className="text-3xl font-bold text-sky-500 mb-6 text-center">
           Welcome, {user.displayName}!
         </h2>
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3">
           <Link to="/" className="">
             <button className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium">
               Go to Homepage
-            </button>
-          </Link>
-          <Link to="/" className="">
-            <button
-              onClick={handleSignOut}
-              className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium"
-            >
-              Logout
             </button>
           </Link>
         </div>

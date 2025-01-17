@@ -14,22 +14,24 @@ This repository serves as a hub to document my web development learning process.
 - **Learning Branches**: Each branch is dedicated to a specific topic or project. I'll use different branches to organize my progress on various web development concepts and technologies.
   - For example: `project-1`, `concept-2`, etc.
 
----  
+---
 
-## About This Project  
+## About This Project
 
-This branch, **React Authentication**, is dedicated to implementing a robust authentication system in React applications. Throughout this project, I focus on setting up Firebase Authentication and implementing essential features for managing user access.  
+This branch, **React Authentication**, focuses on building a robust authentication system for React applications. It demonstrates the step-by-step integration of Firebase Authentication and essential features to manage user access effectively.
 
-### Key Highlights  
+### Key Highlights
 
-1. **Firebase Authentication Setup**: Learn how to configure and integrate Firebase for handling authentication.
-2. **Login with Social Handlers**: Enable users to log in using their Google, Github accounts.
-3. **Login with Email & Password**: Implement a secure way for users to log in using traditional email/password credentials.
-4. **Update User Information**: Allow users to modify their profile information, such as name or email.
-5. **Display Logged User**: Dynamically display information about the currently logged-in user in the application.
-6. **Logout Functionality**: Provide a simple and intuitive way for users to log out.  
+1. **Firebase Authentication Setup**: Comprehensive guide to configuring and integrating Firebase for secure user authentication.
+2. **Social Login Options**: Enable users to log in with their Google or GitHub accounts seamlessly.
+3. **Email & Password Login**: Implement a secure and user-friendly traditional login method using email and password.
+4. **Profile Updates**: Provide users with the ability to update their profile details, such as their name and email.
+5. **User Session Display**: Dynamically display the information of the currently logged-in user within the app.
+6. **Logout Functionality**: Implement a simple and intuitive logout feature for ending user sessions.
+7. **Shared State Management**: Use the Context API to manage and share authentication states across the application.
+8. **Private Routes**: Protect sensitive routes and redirect users based on their authentication status.
 
----  
+---
 
 ## **How to Use This Branch**
 

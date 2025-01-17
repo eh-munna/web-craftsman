@@ -1,17 +1,12 @@
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  updateProfile,
-} from 'firebase/auth';
-import { useState } from 'react';
+import { updateProfile } from 'firebase/auth';
+import { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router';
-import app from '../../authentication/firebase.authentication';
+import { AuthContext } from '../../providers/AuthProvider';
 
 function Signup() {
-  const [user, setUser] = useState(null);
-  const auth = getAuth(app);
+  const { user, setUser, createUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleSignup = (e) => {
     e.preventDefault();
@@ -19,11 +14,12 @@ function Signup() {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser(email, password)
       .then((userCredential) => {
         const loggedUser = userCredential.user;
         updateProfile(loggedUser, { displayName: name });
         setUser(loggedUser);
+        navigate('/');
       })
       .catch((error) => {
         const errorCode = error.code;

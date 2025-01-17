@@ -1,0 +1,39 @@
+{
+  "colors": {
+    "primary": {
+      "default": "bg-sky-500 text-gray-900",
+      "hover": "hover:bg-gray-700 hover:text-white"
+    },
+    "secondary": {
+      "default": "bg-gray-700 text-gray-300",
+      "hover": "hover:bg-gray-600 hover:text-white"
+    },
+    "text": {
+      "heading": "text-sky-500",
+      "default": "text-gray-300",
+      "light": "text-gray-400",
+      "contrast": "text-white"
+    },
+    "background": {
+      "dark": "bg-gray-900",
+      "darker": "bg-gray-800",
+      "light": "bg-gray-700"
+    },
+    "border": {
+      "default": "border border-sky-500",
+      "hover": "hover:border-sky-700"
+    }
+  },
+  "button": {
+    "base": "py-2 px-4 rounded-lg transition duration-200 font-medium",
+    "primary": "bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white",
+    "secondary": "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white"
+  },
+  "input": {
+    "base": "w-full mt-2 p-3 rounded bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-sky-500"
+  },
+  "link / a": {
+    "base": "text-sky-500 hover:text-white transition duration-200",
+    "button": "w-full text-center bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium"
+  }
+}

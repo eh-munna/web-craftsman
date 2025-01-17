@@ -6,9 +6,12 @@ import Contact from './components/Contact/Contact';
 import ErrorPage from './components/Error/ErrorPage';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import Orders from './components/Orders/Orders';
 import Services from './components/Services/Services';
 import Signup from './components/Signup/Signup';
 import './index.css';
+import AuthProvider from './providers/AuthProvider';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -33,11 +36,22 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
       },
+      {
+        path: '/orders',
+        loader: async () => await fetch('/orders.json'),
+        element: (
+          <PrivateRoute>
+            <Orders />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );
