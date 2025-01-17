@@ -5,10 +5,9 @@ import App from './App';
 import Contact from './components/Contact/Contact';
 import ErrorPage from './components/Error/ErrorPage';
 import Home from './components/Home/Home';
-import AppliedJobs from './components/Job/AppliedJobs/AppliedJobs';
-import JobDetails from './components/Job/JobDetails/JobDetails';
+import Login from './components/Login/Login';
 import Services from './components/Services/Services';
-import useJobLoader from './hooks/useJobLoader';
+import Signup from './components/Signup/Signup';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -19,22 +18,20 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       {
-        path: '/job/:jobId',
-        loader: useJobLoader,
-        element: <JobDetails />,
-      },
-      {
-        path: '/applied-jobs',
-        loader: async () => await fetch(`/data.json`),
-        element: <AppliedJobs />,
-      },
-      {
         path: '/services',
         element: <Services />,
       },
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/signup',
+        element: <Signup />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
       },
     ],
   },

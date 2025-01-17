@@ -4,9 +4,10 @@ import { NavLink } from 'react-router';
 function Navbar() {
   const routes = [
     { path: '/', name: 'Home' },
-    { path: '/applied-jobs', name: 'Applied Jobs' },
     { path: '/services', name: 'Services' },
     { path: '/contact', name: 'Contact' },
+    { path: '/signup', name: 'Signup' },
+    { path: '/login', name: 'Login' },
   ];
 
   return (

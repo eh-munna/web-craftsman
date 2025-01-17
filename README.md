@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **React Router Hunting** branch of **web-craftsman**!
+Welcome to the **React Authentication** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -14,23 +14,26 @@ This repository serves as a hub to document my web development learning process.
 - **Learning Branches**: Each branch is dedicated to a specific topic or project. I'll use different branches to organize my progress on various web development concepts and technologies.
   - For example: `project-1`, `concept-2`, etc.
 
----
+---  
 
-## About This Project
+## About This Project  
 
-This branch, **React Router Hunting**, focuses on mastering React Router and its use in dynamic and interactive web applications. The key objectives of this branch include:
+This branch, **React Authentication**, is dedicated to implementing a robust authentication system in React applications. Throughout this project, I focus on setting up Firebase Authentication and implementing essential features for managing user access.  
 
-### Key Highlights
+### Key Highlights  
 
-1. **Dynamic Routing**: Implementing routes that adapt to URL parameters to render specific content dynamically.
-2. **Saving Data in Local Storage**: Storing user or application data persistently in the browser.
-3. **Loading Data in Dynamic Routes**: Fetching and displaying data based on route parameters, enabling dynamic and personalized user experiences.
+1. **Firebase Authentication Setup**: Learn how to configure and integrate Firebase for handling authentication.
+2. **Login with Social Handlers**: Enable users to log in using their Google, Github accounts.
+3. **Login with Email & Password**: Implement a secure way for users to log in using traditional email/password credentials.
+4. **Update User Information**: Allow users to modify their profile information, such as name or email.
+5. **Display Logged User**: Dynamically display information about the currently logged-in user in the application.
+6. **Logout Functionality**: Provide a simple and intuitive way for users to log out.  
 
----
+---  
 
 ## **How to Use This Branch**
 
-To explore the **React Router Hunting** module, follow these steps:
+To explore the **React Authentication** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -47,7 +50,7 @@ To explore the **React Router Hunting** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout react-router-hunting
+   git checkout react-authentication
    ```
 
 4. **Install dependencies:**
