@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **React Authentication** branch of **web-craftsman**!
+Welcome to the **Backend Integration** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -18,18 +18,15 @@ This repository serves as a hub to document my web development learning process.
 
 ## About This Project
 
-This branch, **React Authentication**, focuses on building a robust authentication system for React applications. It demonstrates the step-by-step integration of Firebase Authentication and essential features to manage user access effectively.
+This branch, **Backend Integration**, focuses on implementing robust backend functionalities using modern tools and frameworks. It highlights how to integrate backend services with frontend applications effectively.
 
 ### Key Highlights
 
-1. **Firebase Authentication Setup**: Comprehensive guide to configuring and integrating Firebase for secure user authentication.
-2. **Social Login Options**: Enable users to log in with their Google or GitHub accounts seamlessly.
-3. **Email & Password Login**: Implement a secure and user-friendly traditional login method using email and password.
-4. **Profile Updates**: Provide users with the ability to update their profile details, such as their name and email.
-5. **User Session Display**: Dynamically display the information of the currently logged-in user within the app.
-6. **Logout Functionality**: Implement a simple and intuitive logout feature for ending user sessions.
-7. **Shared State Management**: Use the Context API to manage and share authentication states across the application.
-8. **Private Routes**: Protect sensitive routes and redirect users based on their authentication status.
+1. **Create User**: Implementation of user registration, including data validation and secure password storage.
+2. **Get Users**: Fetch a list of all registered users from the database with proper pagination and filtering options.
+3. **Get Specific User**: Retrieve detailed information about a specific user based on their unique ID.
+4. **Update Specific User**: Modify user information while ensuring validation rules are maintained.
+5. **Delete Specific User**: Remove a user’s data from the system safely and securely.
 
 ---
 
@@ -52,7 +49,7 @@ To explore the **React Authentication** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout react-authentication
+   git checkout backend-integration
    ```
 
 4. **Install dependencies:**

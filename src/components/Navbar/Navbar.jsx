@@ -1,26 +1,10 @@
-import React, { useContext } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom'; // Make sure this is 'react-router-dom'
-import { AuthContext } from '../../providers/AuthProvider';
+import React from 'react';
+import { NavLink } from 'react-router-dom'; // Make sure this is 'react-router-dom'
 
 function Navbar() {
-  const { user, userSignOut, setUser } = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const handleSignOut = async () => {
-    try {
-      await userSignOut();
-      setUser(null);
-      navigate('/');
-    } catch (error) {
-      console.error('Error during sign-out:', error.code, error.message);
-    }
-  };
-
   const routes = [
     { path: '/', name: 'Home' },
-    { path: '/orders', name: 'Orders' },
-    { path: '/services', name: 'Services' },
-    { path: '/contact', name: 'Contact' },
+    { path: '/users', name: 'User Management' },
   ];
 
   return (
@@ -37,9 +21,6 @@ function Navbar() {
         <ul className="flex gap-6">
           {/* Render the main routes */}
           {routes.map(({ path, name }) => {
-            if (name === 'Orders' && !user) {
-              return null; // Skip rendering Orders if user is not logged in.
-            }
             return (
               <li key={name}>
                 <NavLink to={path} className="hover:text-white">
@@ -48,30 +29,6 @@ function Navbar() {
               </li>
             );
           })}
-
-          {/* Conditionally render auth links */}
-          {!user ? (
-            <>
-              <li>
-                <NavLink to="/login" className="hover:text-white">
-                  Login
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/signup" className="hover:text-white">
-                  Signup
-                </NavLink>
-              </li>
-            </>
-          ) : (
-            <li>
-              <NavLink to="/login" className="hover:text-white">
-                <button onClick={handleSignOut} className="hover:text-white">
-                  Logout
-                </button>
-              </NavLink>
-            </li>
-          )}
         </ul>
       </div>
     </nav>
