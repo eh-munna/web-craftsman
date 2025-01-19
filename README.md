@@ -32,7 +32,7 @@ This branch, **Backend Integration**, focuses on implementing robust backend fun
 
 ## **How to Use This Branch**
 
-To explore the **React Authentication** module, follow these steps:
+To explore the **Backend Integration** module, follow these steps:
 
 1. **Clone the repository:**
 
