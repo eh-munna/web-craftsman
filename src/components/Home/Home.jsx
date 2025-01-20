@@ -18,13 +18,18 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+      <div className="flex flex-col items-center justify-center min-h-[75vh] bg-gray-900">
         <h2 className="text-3xl font-bold text-sky-500 mb-6 text-center">
-          Hi! {user && user.displayName + `,`} Welcome to the React
-          Authentication
+          <span className="block">
+            {user ? `Hi, ${user?.displayName}!` : `Hi!`}
+          </span>
+          <span className="block">
+            Welcome to the Advanced Backend and Authentication
+          </span>
         </h2>
         <p className="text-lg text-gray-300 text-center mb-6">
-          This is a simple example of React authentication using Firebase.
+          This is a simple app on top Firebase Authentication, Routing, and some
+          Advanced Backend Technologies
         </p>
         <div className="flex flex-col gap-3 w-1/5">
           {user ? (

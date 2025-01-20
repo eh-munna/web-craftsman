@@ -1,17 +1,18 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
+import PrivateRoute from './Routes/PrivateRoute';
+import Bookings from './components/Bookings/Bookings';
 import Contact from './components/Contact/Contact';
 import ErrorPage from './components/Error/ErrorPage';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import Orders from './components/Orders/Orders';
+import ServiceCheckout from './components/Services/ServiceCheckout';
 import Services from './components/Services/Services';
 import Signup from './components/Signup/Signup';
 import './index.css';
 import AuthProvider from './providers/AuthProvider';
-import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,18 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       {
         path: '/services',
+        loader: async () => await fetch(`http://localhost:3000/services`),
         element: <Services />,
+      },
+      {
+        path: '/services/checkout/:_id',
+        loader: async ({ params }) =>
+          await fetch(`http://localhost:3000/services/${params._id}`),
+        element: (
+          <PrivateRoute>
+            <ServiceCheckout />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/contact',
@@ -37,11 +49,10 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: '/orders',
-        loader: async () => await fetch('/orders.json'),
+        path: '/bookings',
         element: (
           <PrivateRoute>
-            <Orders />
+            <Bookings />
           </PrivateRoute>
         ),
       },

@@ -41,7 +41,7 @@ function Login() {
       .then((result) => {
         const loggedUser = result.user;
         setUser(loggedUser);
-        navigate('/');
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;

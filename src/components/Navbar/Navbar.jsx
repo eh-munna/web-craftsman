@@ -18,14 +18,14 @@ function Navbar() {
 
   const routes = [
     { path: '/', name: 'Home' },
-    { path: '/orders', name: 'Orders' },
     { path: '/services', name: 'Services' },
+    { path: '/bookings', name: 'Bookings' },
     { path: '/contact', name: 'Contact' },
   ];
 
   return (
     <nav className="bg-gray-900 text-sky-500 py-4 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center px-6">
         {/* Logo */}
         <div className="text-2xl font-bold">
           <NavLink to="/" className="hover:text-white">
@@ -37,7 +37,7 @@ function Navbar() {
         <ul className="flex gap-6">
           {/* Render the main routes */}
           {routes.map(({ path, name }) => {
-            if (name === 'Orders' && !user) {
+            if (name === 'Bookings' && !user) {
               return null; // Skip rendering Orders if user is not logged in.
             }
             return (
