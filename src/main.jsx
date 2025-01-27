@@ -5,14 +5,22 @@ import App from './App';
 import PrivateRoute from './Routes/PrivateRoute';
 import Bookings from './components/Bookings/Bookings';
 import Contact from './components/Contact/Contact';
+import Dashboard from './components/Dashboard/Dashboard';
 import ErrorPage from './components/Error/ErrorPage';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import ServiceCheckout from './components/Services/ServiceCheckout';
+import BookService from './components/Services/BookService';
 import Services from './components/Services/Services';
 import Signup from './components/Signup/Signup';
 import './index.css';
 import AuthProvider from './providers/AuthProvider';
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AdminRoute from './Routes/AdminRoute';
+import DashboardHome from './components/Dashboard/DashboardHome';
+import Users from './components/Users/Users';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -23,7 +31,10 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       {
         path: '/services',
-        loader: async () => await fetch(`http://localhost:3000/services`),
+        loader: async () =>
+          await fetch(`http://localhost:3000/services`, {
+            credentials: 'include',
+          }),
         element: <Services />,
       },
       {
@@ -32,7 +43,7 @@ const router = createBrowserRouter([
           await fetch(`http://localhost:3000/services/${params._id}`),
         element: (
           <PrivateRoute>
-            <ServiceCheckout />
+            <BookService />
           </PrivateRoute>
         ),
       },
@@ -48,12 +59,30 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
       },
+    ],
+  },
+  {
+    path: '/dashboard',
+    element: (
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>
+    ),
+    children: [
       {
-        path: '/bookings',
+        path: '/dashboard',
+        element: <DashboardHome />,
+      },
+      {
+        path: '/dashboard/bookings',
+        element: <Bookings />,
+      },
+      {
+        path: '/dashboard/users',
         element: (
-          <PrivateRoute>
-            <Bookings />
-          </PrivateRoute>
+          <AdminRoute>
+            <Users />
+          </AdminRoute>
         ),
       },
     ],
@@ -61,8 +90,10 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </QueryClientProvider>
   </StrictMode>
 );

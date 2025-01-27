@@ -1,17 +1,16 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../authentication/firebase.authentication';
-import { AuthContext } from '../../providers/AuthProvider';
+import useAuth from '../../hooks/useAuth';
 
 function Login() {
   const { user, setUser, createGoogleLogin, createGithubLogin, userSignOut } =
-    useContext(AuthContext);
+    useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location?.state?.from?.pathname || '/';
 
   // ---login with email and password---
 
@@ -25,6 +24,22 @@ function Login() {
         const loggedUser = userCredential.user;
         setUser(loggedUser);
         navigate(from, { replace: true });
+        // const userInfo = {
+        //   // name: loggedUser?.displayName,
+        //   email: loggedUser?.email,
+        // };
+        // (async () => {
+        //   const { data } = await axios.post(
+        //     `http://localhost:3000/users/auth-login`,
+        //     userInfo,
+        //     {
+        //       withCredentials: true,
+        //     }
+        //   );
+        //   if (data.success) {
+        //     navigate(from, { replace: true });
+        //   }
+        // })();
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -42,6 +57,21 @@ function Login() {
         const loggedUser = result.user;
         setUser(loggedUser);
         navigate(from, { replace: true });
+        // const userInfo = {
+        //   email: loggedUser?.email,
+        // };
+        // (async () => {
+        //   const { data } = await axios.post(
+        //     `http://localhost:3000/users/auth-login`,
+        //     userInfo,
+        //     {
+        //       withCredentials: true,
+        //     }
+        //   );
+        //   if (data.success) {
+        //     navigate(from, { replace: true });
+        //   }
+        // })();
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -76,22 +106,26 @@ function Login() {
       console.log('Error:', errorCode, errorMessage);
     }
   };
+  // if (user) {
+  //   return (
+  //     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+  //       <h2 className="text-3xl font-bold text-sky-500 mb-6 text-center">
+  //         Welcome, {user.displayName}!
+  //       </h2>
+  //       <div className="flex flex-col gap-3">
+  //         <Link to="/" className="">
+  //           <button className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium">
+  //             Go to Homepage
+  //           </button>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   if (user) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
-        <h2 className="text-3xl font-bold text-sky-500 mb-6 text-center">
-          Welcome, {user.displayName}!
-        </h2>
-        <div className="flex flex-col gap-3">
-          <Link to="/" className="">
-            <button className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium">
-              Go to Homepage
-            </button>
-          </Link>
-        </div>
-      </div>
-    );
+    // Redirect to homepage or dashboard
+    return <Navigate to="/" replace />;
   }
 
   return (

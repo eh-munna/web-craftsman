@@ -10,7 +10,7 @@ function Services() {
         <h1 className="text-4xl font-bold text-sky-500 text-center mb-8">
           Our Services
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}>
           {services.map((service) => (
             <div
               key={service._id}
@@ -29,7 +29,7 @@ function Services() {
                 className="mt-auto bg-sky-500 text-gray-900 hover:bg-gray-900 hover:text-white py-2 px-4 rounded-full transition duration-200"
               >
                 <span className="inline-flex items-center justify-center gap-3">
-                  Checkout <FaArrowRight />
+                  Book <FaArrowRight />
                 </span>
               </Link>
             </div>

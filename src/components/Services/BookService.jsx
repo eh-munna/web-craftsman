@@ -38,7 +38,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router';
 import { AuthContext } from '../../providers/AuthProvider';
 
-function ServiceCheckout() {
+function BookService() {
   const navigate = useNavigate();
   const { data: service } = useLoaderData();
   const { user } = useContext(AuthContext);
@@ -83,6 +83,7 @@ function ServiceCheckout() {
       },
       bookingDate: userData.date,
       status: 'pending',
+      price: service.price,
     };
 
     // Logic for submitting the form
@@ -108,7 +109,7 @@ function ServiceCheckout() {
 
       if (data?.insertedId) {
         alert(`"${service.title}" is booked successfully!`);
-        navigate('/bookings');
+        navigate('/dashboard/bookings');
       }
       // Reset the form
       setUserData((prevData) => ({
@@ -189,4 +190,4 @@ function ServiceCheckout() {
   );
 }
 
-export default ServiceCheckout;
+export default BookService;

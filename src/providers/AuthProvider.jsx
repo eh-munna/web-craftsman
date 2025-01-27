@@ -9,11 +9,16 @@ import {
 
 import { createContext, useEffect, useState } from 'react';
 import auth from '../authentication/firebase.authentication';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 
 export const AuthContext = createContext(null);
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const axiosPublic = useAxiosPublic();
+  // const location = useLocation();
+  // const navigate = useNavigate();
+  // const from = location.state?.from?.pathname || '/';
 
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
@@ -53,9 +58,40 @@ function AuthProvider({ children }) {
   // }, []);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser || null);
       setLoading(false);
+
+      if (currentUser) {
+        const userInfo = { email: currentUser?.email };
+        try {
+          const { data } = await axiosPublic.post(
+            `/users/auth-login`,
+            userInfo,
+            {
+              withCredentials: true,
+            }
+          );
+          if (data.success) {
+            // Redirect logic if needed (e.g., navigate("/"))
+          }
+        } catch (error) {
+          console.error('Error during auth-login:', error.message);
+        }
+      } else {
+        try {
+          const { data } = await axiosPublic.post(
+            `/users/auth-logout`,
+            {},
+            { withCredentials: true }
+          );
+          if (data.success) {
+            // Redirect logic on successful logout
+          }
+        } catch (error) {
+          console.error('Error during auth-logout:', error.message);
+        }
+      }
     });
     return () => {
       unsubscribe();

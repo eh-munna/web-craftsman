@@ -2,56 +2,76 @@ import { updateProfile } from 'firebase/auth';
 import { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, useNavigate } from 'react-router';
+import { Link, Navigate } from 'react-router';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 import { AuthContext } from '../../providers/AuthProvider';
 
 function Signup() {
-  const { user, setUser, createUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { user, setUser, createUser, createGoogleLogin } =
+    useContext(AuthContext);
+  const axiosPublic = useAxiosPublic();
+
   const handleSignup = (e) => {
     e.preventDefault();
-    // Sign up logic goes here
+    const form = e.target;
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    createUser(email, password)
-      .then((userCredential) => {
-        const loggedUser = userCredential.user;
-        updateProfile(loggedUser, { displayName: name });
-        setUser(loggedUser);
-        navigate('/');
-      })
-      .catch((error) => {
+    const userInfo = {
+      name,
+      email,
+      role: 'user',
+    };
+
+    (async () => {
+      try {
+        const { data } = await axiosPublic.post('/users', userInfo);
+        if (data?.success) {
+          const userCredential = await createUser(email, password);
+          const createdUser = await userCredential.user;
+          await updateProfile(createdUser, { displayName: userInfo?.name });
+          setUser(createdUser);
+          form.reset();
+          <Navigate to="/" replace />;
+        }
+      } catch (error) {
+        // Handle 409 Conflict
+        if (error.response && error.response.status === 409) {
+          alert(error.response.data.message);
+        } else {
+          alert('Error creating user!');
+        }
+      }
+    })();
+  };
+
+  const handleGoogleLogin = () => {
+    (async () => {
+      try {
+        const result = await createGoogleLogin();
+        const loggedUser = await result.user;
+        const userInfo = {
+          name: loggedUser?.displayName,
+          email: loggedUser?.email,
+          role: 'user',
+        };
+        const { data } = await axiosPublic.post('/users', userInfo);
+        console.log(data);
+        if (data?.success) {
+          setUser(loggedUser);
+          <Navigate to="/" replace />;
+        }
+      } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log('Error:', errorCode, errorMessage);
-      });
-    // navigate('/');
+      }
+    })();
   };
 
   if (user) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
-        <h2 className="text-3xl font-bold text-sky-500 mb-6 text-center">
-          Welcome, {user.displayName}!
-        </h2>
-        <div className="flex gap-3">
-          <Link to="/" className="">
-            <button className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium">
-              Go to Homepage
-            </button>
-          </Link>
-          {/* <Link to="/" className="">
-            <button
-              onClick={handleSignOut}
-              className="bg-sky-500 text-gray-900 hover:bg-gray-700 hover:text-white py-2 px-4 rounded-full transition duration-200 font-medium"
-            >
-              Logout
-            </button>
-          </Link> */}
-        </div>
-      </div>
-    );
+    // Redirect to homepage or dashboard
+    return <Navigate to="/" replace />;
   }
 
   return (
@@ -135,7 +155,7 @@ function Signup() {
         {/* Google Login Button */}
         <div className="mt-4 flex gap-3 justify-center">
           <button
-            // onClick={handleGoogleLogin}
+            onClick={handleGoogleLogin}
             className="flex items-center justify-center gap-2 bg-gray-700 border border-sky-500 hover:border-sky-700 text-gray-300 hover:bg-gray-600 py-2 px-4 rounded-lg transition duration-200"
             type="button"
           >

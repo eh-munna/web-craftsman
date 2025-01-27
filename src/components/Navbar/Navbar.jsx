@@ -19,8 +19,8 @@ function Navbar() {
   const routes = [
     { path: '/', name: 'Home' },
     { path: '/services', name: 'Services' },
-    { path: '/bookings', name: 'Bookings' },
     { path: '/contact', name: 'Contact' },
+    { path: '/dashboard', name: 'Dashboard' },
   ];
 
   return (
@@ -37,8 +37,8 @@ function Navbar() {
         <ul className="flex gap-6">
           {/* Render the main routes */}
           {routes.map(({ path, name }) => {
-            if (name === 'Bookings' && !user) {
-              return null; // Skip rendering Orders if user is not logged in.
+            if (name === 'Dashboard' && !user) {
+              return null; // Skip rendering if user is not logged in.
             }
             return (
               <li key={name}>
