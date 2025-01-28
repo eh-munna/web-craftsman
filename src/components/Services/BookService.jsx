@@ -76,7 +76,6 @@ function BookService() {
     const orderedService = {
       serviceTitle: service.title,
       service: service._id,
-      serviceId: service.serviceId,
       customer: {
         name: userData.name,
         email: userData.email,

@@ -5,7 +5,8 @@ const Dashboard = () => {
   const userRoutes = [{ path: '/dashboard/bookings', name: 'Bookings' }];
   const adminRoutes = [
     { path: '/dashboard/users', name: 'Users' },
-    { path: '/dashboard/manage-items', name: 'Manage Items' },
+    { path: '/dashboard/add-service', name: 'Add Service' },
+    { path: '/dashboard/manage-services', name: 'Manage Services' },
   ];
   const mainRoutes = [
     { path: '/', name: 'Home' },
