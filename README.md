@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **Advanced Backend Integration** branch of **web-craftsman**!
+Welcome to the **Intro to TypeScript** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -16,45 +16,21 @@ This repository serves as a hub to document my web development learning process.
 
 ---
 
-## About This Project
+## Topics Covered
 
-The **Advanced Backend Integration** branch focuses on building robust backend functionalities using modern tools and frameworks. It emphasizes seamless integration between backend services and frontend applications to deliver a complete, scalable, and secure web solution.
-
-### Core Features
-
-- **Booking Services**:
-
-  - Create route-specific services for booking functionalities.
-  - Save booking details into the database (Booking collection).
-  - Retrieve and display bookings based on user email addresses for personalized views.
-
-- **Authentication & Authorization**:
-
-  - Implement JSON Web Tokens (JWT) to secure user data and protect routes.
-  - Utilize tokens to verify users and restrict unauthorized access.
-
-- **Data Fetching & State Management**:
-
-  - Use hooks to fetch and manage data dynamically.
-  - Leverage **TanStack Query** for optimized data fetching, caching, and state updates.
-
-- **Role-Based Features**:
-  - Create distinct routes and functionalities for admins and regular users.
-  - Implement comprehensive product management, including adding, updating, and removing products.
-
-### Future Enhancements
-
-- **Payment System Integration**:  
-   Plans are underway to implement a secure payment gateway, allowing users to make transactions directly through the application. This will include features such as:
-  - Payment method selection (e.g., credit/debit cards, PayPal).
-  - Transaction history and invoice generation.
-  - Secure handling of sensitive payment data using industry-standard practices.
+- **Mastering Basic Data Types**
+- **Object Power**
+- **Optional and Literal Types**
+- **Function in TypeScript**
+- **Destructuring in TypeScript**
+- **Type Aliases in TypeScript**
+- **Union and Intersection Types**
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **Advanced Backend Integration** module, follow these steps:
+To explore the **Intro to TypeScript** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -71,7 +47,7 @@ To explore the **Advanced Backend Integration** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout advanced-backend-integration
+   git checkout intro-to-ts
    ```
 
 4. **Install dependencies:**
