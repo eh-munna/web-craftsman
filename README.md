@@ -1,6 +1,6 @@
 # Web Craftsman - My Web Development Learning Journey
 
-Welcome to the **Intro to TypeScript** branch of **web-craftsman**!
+Welcome to the **Advancing in TypeScript** branch of **web-craftsman**!
 
 Hi, I'm Emran! I'm on a journey to learn and master web development, focusing on both frontend and backend technologies.
 
@@ -18,19 +18,26 @@ This repository serves as a hub to document my web development learning process.
 
 ## Topics Covered
 
-- **Mastering Basic Data Types**
-- **Object Power**
-- **Optional and Literal Types**
-- **Function in TypeScript**
-- **Destructuring in TypeScript**
-- **Type Aliases in TypeScript**
-- **Union and Intersection Types**
+- **Type Assertion / Type Narrowing**
+- **Extending in TypeScript**
+- **Introduction to Generics**
+- **Generic with Interface**
+- **Constraints in TypeScript**
+- **keyof Constraints**
+- **Conditional Types**
+- **Mapped Type in TypeScript**
+  - **Pick**
+  - **Omit**
+  - **Partial**
+  - **Readonly**
+  - **Required**
+  - **Record**
 
 ---
 
 ## **How to Use This Branch**
 
-To explore the **Intro to TypeScript** module, follow these steps:
+To explore the **Advancing in TypeScript** module, follow these steps:
 
 1. **Clone the repository:**
 
@@ -47,7 +54,7 @@ To explore the **Intro to TypeScript** module, follow these steps:
 3. **Switch to this branch:**
 
    ```bash
-   git checkout intro-to-ts
+   git checkout ts-advanced
    ```
 
 4. **Install dependencies:**
