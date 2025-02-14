@@ -1,11 +1,9 @@
-import Player from './components/Player/Player';
-import Users from './components/Users/Users';
+import ReduxPlayground from './components/ReduxPlayground/ReduxPlayground';
 
 function App() {
   return (
     <>
-      <Player />
-      <Users />
+      <ReduxPlayground />
     </>
   );
 }
