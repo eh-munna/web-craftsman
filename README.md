@@ -20,9 +20,7 @@ This repository serves as a hub to document my web development learning process.
 
 1. Create a Redux store with `configureStore`
 2. Provide the Redux store to the React application components
-
-- Pass the Redux `store` as `<Provider store={store}>`
-
+   - Pass the Redux `store` as `<Provider store={store}>`
 3. Create a Redux "slice" reducer with `createSlice`
 4. Use the React-Redux `useSelector/useDispatch` hooks in React components
    - Read data from the store with the `useSelector` hook
