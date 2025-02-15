@@ -1,12 +1,10 @@
 import './App.css';
-import ReduxPlayground from './components/ReduxPlayground/ReduxPlayground';
+import Counter from './components/Counter/Counter';
 
-function App() {
+export default function App() {
   return (
     <>
-      <ReduxPlayground />
+      <Counter />
     </>
   );
 }
-
-export default App;
