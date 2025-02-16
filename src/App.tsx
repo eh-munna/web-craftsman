@@ -1,10 +1,12 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Counter from './components/Counter/Counter';
+import Navbar from './components/Navbar/Navbar';
 
 export default function App() {
   return (
     <>
-      <Counter />
+      <Navbar />
+      <Outlet />
     </>
   );
 }
