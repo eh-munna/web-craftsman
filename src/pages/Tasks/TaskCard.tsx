@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { ITask } from '@/types/types';
 
 interface TaskProp {
@@ -14,13 +15,11 @@ export default function TaskCard({ task }: TaskProp) {
       }`}
     >
       <h3
-        className={`text-xl font-semibold ${
-          priority === 'high'
-            ? 'text-red-500'
-            : priority === 'medium'
-            ? 'text-yellow-500'
-            : 'text-green-500'
-        }`}
+        className={cn('text-xl font-semibold', {
+          'text-red-500': priority === 'high',
+          'text-green-500': priority === 'low',
+          'text-gray-500': priority === 'medium',
+        })}
       >
         {title}
       </h3>
